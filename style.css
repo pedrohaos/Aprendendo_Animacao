@@ -1,0 +1,65 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.btn{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: .5em 1em;
+    color: blue;
+    background-color: dodgerblue;
+    border: 10px solid blue;
+    border-radius: 5px;
+
+
+    /*
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    */
+
+
+    /* transition: transform 0.3s ease 0s; */
+
+    /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
+
+
+    /* transition: all 0.3; */
+
+
+}
+
+.btn:hover{
+    transform: translateY(-50px);
+    background-color: blue;
+    color: white;
+}
+
+
+@keyframes slideInleft{
+    from{
+        transform: translateX(-300px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+.nome{
+    /* animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 2; 2 ou infinite
+    animation-direction: normal; normal ou reverse 
+    animation-fill-mode: forwards;none, both, forwards ou backwards */
+
+    animation: slideInleft 1s ease-in 0s 1 reverse backwards;
+
+    transform: translateX(-150px);
+
+}
